@@ -1,0 +1,36 @@
+header{
+    height: 30px;
+
+}
+
+.background{
+    background-color: hotpink;
+}
+
+footer{
+    position: relative;
+    bottom: 0;
+    height: 30px;
+}
+
+.aufgabe{
+    margin-top: 30px;
+}
+
+#maxValue{
+    width: 40px;
+}
+
+#richtige div:nth-child(odd){
+    background-color: deeppink;
+    color: white;
+    font-size: 20px;
+    text-align: center;
+}
+
+#richtige div:nth-child(even){
+    background-color: pink;
+    color: white;
+    font-size: 20px;
+    text-align: center;
+}
