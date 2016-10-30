@@ -18,7 +18,12 @@ footer{
 }
 
 #maxValue{
-    width: 40px;
+    width: 70px;
+}
+@media (max-width: 480px){
+    #maxValue{
+        width:100%
+    }
 }
 
 #richtige div:nth-child(odd){
