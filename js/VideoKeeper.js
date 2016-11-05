@@ -1,7 +1,7 @@
 /**
  * Created by rjr910 on 05.11.16.
  */
-var VideoKeeper = (function () {
+var VideoKeeper = function () {
 
     var videos = [];
 
@@ -18,4 +18,4 @@ var VideoKeeper = (function () {
     this.getVideos = function () {
         return videos;
     }
-})();
+};
