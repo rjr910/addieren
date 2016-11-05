@@ -6,6 +6,11 @@ var ExcerciseMaker = function () {
     var maxNumber = $('#maxValue').val();
     var number1 = genNumber(maxNumber);
     var number2 = genNumber(maxNumber);
+    var $eingabe = $("#eingabe");
+    var $zahl1 = $("#zahl1");
+    var $zahl2 = $("#zahl2");
+    var $progress = $("#progress");
+    var $richtige = $("#richtige");
     var vk = new VideoKeeper();
 
 
@@ -30,21 +35,22 @@ var ExcerciseMaker = function () {
 
     this.fillNumberFields = function () {
         createExcercise();
-        $("#zahl1").val(number1);
-        $("#zahl2").val(number2);
-        $("#eingabe").val(null);
+        $zahl1.val(number1);
+        $zahl2.val(number2);
+        $eingabe.val(null);
     };
 
     this.doCheck = function () {
-        if ($("#eingabe").val()) {
+
+        if ($eingabe.val()) {
             var erge = number1 + number2;
-            if (erge == $("#eingabe").val()) {
-                $("#richtige").append("<div style='display: none'>" + $("#zahl1").val() + "+" + $("#zahl2").val() + "=" + erge + "</div>");
+            if (erge == $eingabe.val()) {
+                $richtige.append("<div style='display: none'>" + $zahl1.val() + "+" + $zahl2.val() + "=" + erge + "</div>");
                 $('#richtige div').fadeIn('slow');
-                $("#progress").val($("#progress").val() + 10);
-                if (Number($("#progress").val()) >= 100) {
+                $progress.val($progress.val() + 10);
+                if (Number($progress.val()) >= 100) {
                     $(".aufgabe").hide();
-                    $("#richtige").hide();
+                    $richtige.hide();
 
                     var videos = vk.getVideos();
                     $("#video").append(videos[genNumber(videos.length)]);

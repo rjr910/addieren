@@ -15,7 +15,7 @@ $("#eingabe").on("input", function () {
     em.doCheck();
 });
 
-$('#maxValue').on("change", function (target) {
+$('#maxValue').on("change", function () {
     em.setMaxNumber(this.value);
     em.fillNumberFields();
 });
