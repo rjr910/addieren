@@ -2,7 +2,7 @@
  * Created by rjr910 on 05.11.16.
  */
 
-var ExcerciseMaker = function () {
+var ExcerciseMaker = (function () {
     var maxNumber = $('#maxValue').val();
     var number1 = genNumber(maxNumber);
     var number2 = genNumber(maxNumber);
@@ -55,4 +55,4 @@ var ExcerciseMaker = function () {
     };
 
 
-};
+})();
