@@ -21,13 +21,21 @@ $("#eingabe").on("input",function () {
                 $(".aufgabe").hide();
                 $("#richtige").hide();
                 var videoString;
-                switch (genNumber(2)+1){
+                switch (genNumber(7)+1){
                     case 1 : videoString = '<iframe width="853" height="480" src="https://www.youtube.com/embed/EIiBbUkRckE?autoplay=1" frameborder="0" allowfullscreen></iframe>';
                     break;
                     case 2 : videoString = '<iframe width="853" height="480" src="https://www.youtube.com/embed/Q_VpkXd1TKA?autoplay=1" frameborder="0" allowfullscreen></iframe>';
                     break;
                     case 3 : videoString = '<iframe width="853" height="480" src="https://www.youtube.com/embed/eo6i32yWbOY?autoplay=1" frameborder="0" allowfullscreen></iframe>';
                         break;
+                    case 4 : videoString = '<iframe width="560" height="315" src="https://www.youtube.com/embed/pW2bMzgiWpA?autoplay=1" frameborder="0" allowfullscreen></iframe>';
+                    break;
+                    case 5 : videoString = '<iframe width="560" height="315" src="https://www.youtube.com/embed/21OqT-tbv_w?autoplay=1" frameborder="0" allowfullscreen></iframe>';
+                    break;
+                    case 6 : videoString = '<iframe width="560" height="315" src="https://www.youtube.com/embed/x4xrOY5LKM8?autoplay=1" frameborder="0" allowfullscreen></iframe>';
+                    break;
+                    case 7 : videoString = '<iframe width="560" height="315" src="https://www.youtube.com/embed/BjwDV1Is34U?autoplay=1" frameborder="0" allowfullscreen></iframe>';
+                    break;
                     default: videoString = '<iframe width="853" height="480" src="https://www.youtube.com/embed/n-1YjVy2ZTs?autoplay=1" frameborder="0" allowfullscreen></iframe>';
                 }
                 $("#video").append(videoString);
