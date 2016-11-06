@@ -63,7 +63,7 @@ var ExcerciseMaker = function () {
                 if (Number($progress.val()) >= 100) {
                     $(".aufgabe").hide();
                     $richtige.hide();
-                    $c;
+
 
                     var videos = vk.getVideos();
                     $("#video").append(videos[genNumber(videos.length)]);
