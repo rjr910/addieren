@@ -3,12 +3,15 @@
  */
 
 
+'use strict';
+
 function genNumber(zahl) {
     return Math.round(Math.random() * zahl);
 }
 
 var em = new ExcerciseMaker();
 em.fillNumberFields();
+$("#eingabe").focus();
 
 
 $("#eingabe").on("input", function () {
@@ -17,5 +20,10 @@ $("#eingabe").on("input", function () {
 
 $('#maxValue').on("change", function () {
     em.setMaxNumber(this.value);
+    em.fillNumberFields();
+});
+
+$('#untilVideo').on("change", function () {
+    em.setCountExercise(this.value);
     em.fillNumberFields();
 });

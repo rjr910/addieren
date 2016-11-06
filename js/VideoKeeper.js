@@ -1,6 +1,10 @@
 /**
  * Created by rjr910 on 05.11.16.
  */
+
+
+'use strict';
+
 var VideoKeeper = function () {
 
     var videos = [];

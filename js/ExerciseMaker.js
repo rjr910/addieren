@@ -2,6 +2,8 @@
  * Created by rjr910 on 05.11.16.
  */
 
+'use strict';
+
 var ExcerciseMaker = function () {
     var maxNumber = $('#maxValue').val();
     var number1 = genNumber(maxNumber);
@@ -10,7 +12,8 @@ var ExcerciseMaker = function () {
     var $zahl1 = $("#zahl1");
     var $zahl2 = $("#zahl2");
     var $progress = $("#progress");
-    var $richtige = $("#richtige");
+    var $richtige = $("#made");
+    var countExcercise = $("#untilVideo");
     var vk = new VideoKeeper();
 
 
@@ -40,6 +43,15 @@ var ExcerciseMaker = function () {
         $eingabe.val(null);
     };
 
+    this.setCountExercise = function (n) {
+        if (n > 0) {
+            countExcercise.val(n);
+        } else {
+            countExcercise.val(10);
+        }
+
+    };
+
     this.doCheck = function () {
 
         if ($eingabe.val()) {
@@ -47,10 +59,11 @@ var ExcerciseMaker = function () {
             if (erge == $eingabe.val()) {
                 $richtige.append("<div style='display: none'>" + $zahl1.val() + "+" + $zahl2.val() + "=" + erge + "</div>");
                 $('#richtige div').fadeIn('slow');
-                $progress.val($progress.val() + 10);
+                $progress.val($progress.val() + 100 / countExcercise.val());
                 if (Number($progress.val()) >= 100) {
                     $(".aufgabe").hide();
                     $richtige.hide();
+                    $c;
 
                     var videos = vk.getVideos();
                     $("#video").append(videos[genNumber(videos.length)]);

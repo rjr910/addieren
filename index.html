@@ -4,35 +4,77 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Addieren</title>
-    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="bootstrap-3.3.7-dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<header class="background"></header>
+<header class="background container-fluid">
+
+    <button type="button" id="settings" class="btn btn-default pull-right" data-toggle="modal"
+            data-target="#settingsModal">
+        <span class="glyphicon glyphicon-cog"></span>
+    </button>
+
+
+</header>
 <div class="container aufgabe">
+
+
     <div class="input-group">
-        <input type="number" class="col-lg-2 col-sm-12 " id="zahl1" readonly/>
-        <span class="col-lg-1 col-sm-12">+</span>
-        <input type="number" class="col-lg-2 col-sm-12" id="zahl2" readonly/>
-        <span class="col-lg-1 col-sm-12">=</span>
-        <input type="number" class="col-lg-2 col-sm-12" id="eingabe" placeholder="Ergebnis"/>
-        <input type="number" value="10" class="pull-lg-right col-sm-12" id="maxValue"/>
+        <input type="number" class="form-control" id="zahl1" readonly/>
+        <span class="input-group-addon">+</span>
+        <input type="number" class="form-control" id="zahl2" readonly/>
+        <span class="input-group-addon">=</span>
+        <input type="number" class=" form-control" id="eingabe"/>
     </div>
+
+
 </div>
 <hr/>
 <div class="container" id="richtige">
+    <progress class="col-sm-12" id="progress" value="0" max="100"></progress>
 
-    <progress class="col-lg-12" id="progress" value="0" max="100"></progress>
 </div>
+
+<div class="container" id="made"></div>
 <div class="container">
 
-    <div col-lg-8 col-lg-offset-2>
         <div id="video"></div>
-    </div>
-</div>
-<footer></footer>
-<script src="js/jquery.js"></script>
 
+</div>
+
+<div class="modal fade" tabindex="-1" role="dialog" id="settingsModal">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                        aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">Einstellungen</h4>
+            </div>
+            <div class="modal-body">
+
+                <div class="input-group">
+                    <span class="input-group-addon">Höchstwert</span>
+                    <input type="number" value="10" class="form-control" id="maxValue" min="5" max="1000"
+                           aria-describedby="max-value">
+                </div>
+                <div class="input-group">
+                    <span class="input-group-addon">Aufgaben bis zum Video</span>
+                    <input type="number" value="10" class="form-control" id="untilVideo" min="1"
+                           aria-describedby="max-value">
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <!--<button type="button" class="btn btn-primary">Save changes</button>-->
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<footer>&nbsp;</footer>
+<script src="js/jquery.js"></script>
+<script src="bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
 <script src="js/VideoKeeper.js"></script>
 <script src="js/ExerciseMaker.js"></script>
 <script src="js/script.js"></script>

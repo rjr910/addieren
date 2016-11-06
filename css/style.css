@@ -1,5 +1,13 @@
+input {
+    text-align: center;
+}
+
+progress {
+    width: 100% !important;
+}
+
 header{
-    height: 30px;
+    height: 35px;
 
 }
 
@@ -8,22 +16,13 @@ header{
 }
 
 footer{
-    position: relative;
+    position: absolute;
     bottom: 0;
-    height: 30px;
+    height: 35px;
 }
 
 .aufgabe{
     margin-top: 30px;
-}
-
-#maxValue{
-    width: 70px;
-}
-@media (max-width: 480px){
-    #maxValue{
-        width:100%
-    }
 }
 
 #richtige div:nth-child(odd){
