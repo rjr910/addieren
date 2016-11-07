@@ -27,3 +27,11 @@ $('#untilVideo').on("change", function () {
     em.setCountExercise(this.value);
     em.fillNumberFields();
 });
+
+$(window).resize(function () {
+    $('#video').css({width: $(window).innerWidth() + 'px', height: $(window).innerHeight() + 'px'});
+});
+
+$('#reset').on('click', function () {
+    location.reload();
+});
