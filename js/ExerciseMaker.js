@@ -58,7 +58,7 @@ var ExcerciseMaker = function () {
             var erge = number1 + number2;
             if (erge == $eingabe.val()) {
                 $richtige.append("<div style='display: none'>" + $zahl1.val() + "+" + $zahl2.val() + "=" + erge + "</div>");
-                $('#richtige div').fadeIn('slow');
+                $('#made div').fadeIn('slow');
                 $progress.val($progress.val() + 100 / countExcercise.val());
                 if (Number($progress.val()) >= 100) {
                     $(".aufgabe").hide();
