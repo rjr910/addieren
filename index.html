@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Addieren</title>
+    <title>Rechnen</title>
     <link rel="stylesheet" href="bootstrap-3.3.7-dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -22,7 +22,7 @@
 
     <div class="input-group">
         <input type="number" class="form-control" id="zahl1" readonly/>
-        <span class="input-group-addon">+</span>
+        <span class="input-group-addon" id="operator"></span>
         <input type="number" class="form-control" id="zahl2" readonly/>
         <span class="input-group-addon">=</span>
         <input type="number" class=" form-control" id="eingabe"/>
@@ -59,7 +59,15 @@
                     <input type="number" value="10" class="form-control" id="untilVideo" min="1"
                            aria-describedby="max-value">
                 </div>
-
+                <div class="checkbox">
+                    <label><input type="checkbox" value="" id="plus" checked>+ Plus</label>
+                </div>
+                <div class="checkbox">
+                    <label><input type="checkbox" value="" id="minus">- Minus</label>
+                </div>
+                <div class="checkbox disabled">
+                    <label><input type="checkbox" value="" id="times">x Mal</label>
+                </div>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
