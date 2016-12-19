@@ -3,7 +3,6 @@
  */
 
 
-
 var ExcerciseMaker = function () {
     "use strict";
 
@@ -18,26 +17,34 @@ var ExcerciseMaker = function () {
     var $progress = $("#progress");
     var $richtige = $("#made");
     var countExcercise = $("#untilVideo");
-    var plus = $("#plus");
-    var minus = $("#minus");
-    var times = $("#times");
     var operatorArr = ["+"];
     var vk = new VideoKeeper();
 
-
-    vk.addVideo("<iframe  src=\"https://www.youtube.com/embed/EIiBbUkRckE?rel=0&autoplay=1\" frameborder=\"0\" allowfullscreen></iframe>");
-    vk.addVideo("<iframe  src=\"https://www.youtube.com/embed/Q_VpkXd1TKA?autoplay=1\" frameborder=\"0\" allowfullscreen></iframe>");
-    vk.addVideo("<iframe  src=\"https://www.youtube.com/embed/eo6i32yWbOY?autoplay=1\" frameborder=\"0\" allowfullscreen></iframe>");
-    vk.addVideo("<iframe  src=\"https://www.youtube.com/embed/pW2bMzgiWpA?autoplay=1\" frameborder=\"0\" allowfullscreen></iframe>");
-    vk.addVideo("<iframe  src=\"https://www.youtube.com/embed/21OqT-tbv_w?autoplay=1\" frameborder=\"0\" allowfullscreen></iframe>");
-    vk.addVideo("<iframe  src=\"https://www.youtube.com/embed/x4xrOY5LKM8?autoplay=1\" frameborder=\"0\" allowfullscreen></iframe>");
-    vk.addVideo("<iframe  src=\"https://www.youtube.com/embed/BjwDV1Is34U?autoplay=1\" frameborder=\"0\" allowfullscreen></iframe>");
-    vk.addVideo("<iframe  src=\"https://www.youtube.com/embed/n-1YjVy2ZTs?autoplay=1\" frameborder=\"0\" allowfullscreen></iframe>");
+    vk.addVideo("EIiBbUkRckE");
+    vk.addVideo("Q_VpkXd1TKA");
+    vk.addVideo("eo6i32yWbOY");
+    vk.addVideo("pW2bMzgiWpA");
+    vk.addVideo("21OqT-tbv_w");
+    vk.addVideo("x4xrOY5LKM8");
+    vk.addVideo("BjwDV1Is34U");
+    vk.addVideo("n-1YjVy2ZTs");
+    vk.addVideo("IiKb_V7iUW0");
+    vk.addVideo("nYTrIcn4rjg");
+    vk.addVideo("Dky7BkBxc0c");
+    vk.addVideo("xMnx_3BC7EM");
+    vk.addVideo("T8qGpt7hwbI");
+    vk.addVideo("QPV-M5pKrPo");
+    vk.addVideo("f7NwyBnIRTE");
+    vk.addVideo("xqcNHpkGam4");
 
     var createExcercise = function () {
-        operator = operatorArr[genNumber(operatorArr.length - 1)];
         number1 = genNumber(maxNumber);
         number2 = genNumber(maxNumber);
+        if (number1 + number2 > 20) {
+            operator = operatorArr[genNumber(operatorArr.length - 2)];
+        } else {
+            operator = operatorArr[genNumber(operatorArr.length - 1)];
+        }
         if (operator === "-") {
             if (number1 < number2) {
                 var tmp = number1;
