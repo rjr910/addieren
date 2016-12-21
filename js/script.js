@@ -17,13 +17,13 @@ $("#eingabe").on("input", function () {
     em.doCheck();
 });
 
-$('#maxValue').on("change", function () {
+$("#maxValue").on("change", function () {
     "use strict";
     em.setMaxNumber(this.value);
     em.fillNumberFields();
 });
 
-$('#untilVideo').on("change", function () {
+$("#untilVideo").on("change", function () {
     "use strict";
     em.setCountExercise(this.value);
     em.fillNumberFields();
@@ -31,7 +31,7 @@ $('#untilVideo').on("change", function () {
 
 $(window).resize(function () {
     "use strict";
-    $('#video').css({width: $(window).innerWidth() + 'px', height: $(window).innerHeight() + 'px'});
+    $("#video").css({width: $(window).innerWidth() + "px", height: $(window).innerHeight() + "px"});
 });
 
 $("#reset").on("click", function () {
