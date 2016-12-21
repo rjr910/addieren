@@ -44,3 +44,11 @@ footer{
     font-size: 20px;
     text-align: center;
 }
+
+.comicSans{
+    font-family: "Comic Sans MS";
+}
+
+.aufgabe span, .aufgabe input{
+    font-size: 40px;
+}

@@ -37,6 +37,12 @@ var ExcerciseMaker = function () {
     vk.addVideo("f7NwyBnIRTE");
     vk.addVideo("xqcNHpkGam4");
 
+    var changeColorOperator = function () {
+       $("#operator:contains(+)").css("color", "green");
+       $("#operator:contains(-)").css("color", "red");
+       $("#operator:contains(x)").css("color", "blue");
+    };
+
     var createExcercise = function () {
         number1 = genNumber(maxNumber);
         number2 = genNumber(maxNumber);
@@ -60,10 +66,11 @@ var ExcerciseMaker = function () {
 
     this.fillNumberFields = function () {
         createExcercise();
-        $zahl1.val(number1);
-        $zahl2.val(number2);
+        $zahl1.html(number1);
+        $zahl2.html(number2);
         $operator.html(operator);
         $eingabe.val(null);
+        changeColorOperator();
     };
 
     this.addOperators = function (op) {
@@ -100,7 +107,7 @@ var ExcerciseMaker = function () {
             }
 
             if (erge === Number($eingabe.val())) {
-                $richtige.append("<div style='display: none'>" + $zahl1.val() + " " + operator + " " + $zahl2.val() +
+                $richtige.append("<div style='display: none'>" + $zahl1.html() + " " + operator + " " + $zahl2.html() +
                     " = " + erge + "</div>");
                 $("#made div").fadeIn("slow");
                 $progress.val($progress.val() + 100 / countExcercise.val());
