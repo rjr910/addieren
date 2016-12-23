@@ -46,7 +46,7 @@ var ExcerciseMaker = function () {
     var createExcercise = function () {
         number1 = genNumber(maxNumber);
         number2 = genNumber(maxNumber);
-        if (number1 + number2 > 20) {
+        if (number1 + number2 > 20 && $.inArray("x", operatorArr) > 0) {
             operator = operatorArr[genNumber(operatorArr.length - 2)];
         } else {
             operator = operatorArr[genNumber(operatorArr.length - 1)];
@@ -105,7 +105,6 @@ var ExcerciseMaker = function () {
                     erge = number1 * number2;
                     break;
             }
-
             if (erge === Number($eingabe.val())) {
                 $richtige.append("<div style='display: none'>" + $zahl1.html() + " " + operator + " " + $zahl2.html() +
                     " = " + erge + "</div>");
